@@ -1,0 +1,106 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #270979 35%, #270979 65%, #020024 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: ease 0.5s;
+}
+.nav ul,
+.right ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.mainHeader h1 {
+  color: #edf4f5;
+  transition: linear 0.5s;
+  cursor: pointer;
+}
+.cartList {
+  position: relative;
+}
+.cartList::after {
+  display: block;
+  font-size: 11px;
+  font-weight: bolder;
+  color: #270979;
+  background-color: #edf4f5;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 1px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: -7px;
+}
+.nav li,
+.right li {
+  margin: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #edf4f5;
+  transition: ease 0.5s;
+}
+.right li svg path {
+  width: 200px;
+  color: #edf4f5;
+}
+.glow:hover {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 20px #fff,
+    0 0 30px #edf4f5,
+    0 0 40px #edf4f5,
+    0 0 50px #edf4f5,
+    0 0 60px #edf4f5,
+    0 0 70px #edf4f5;
+}
+
+@media (min-width: 899px) {
+  .nav ul {
+    flex-direction: row;
+  }
+  .mainHeader {
+    flex-direction: row;
+  }
+  .icox {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .nav ul {
+    justify-content: space-between;
+    height: 30vh;
+    font-size: larger;
+    flex-direction: column;
+  }
+  .mainHeader .left {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .icox {
+    align-self: center;
+  }
+  .icox svg {
+    color: #edf4f5;
+    height: 50px;
+    width: 50px;
+    transition: ease 1s;
+  }
+
+  .mainHeader {
+    flex-direction: column;
+    height: 100vh;
+    align-content: space-between;
+  }
+}
